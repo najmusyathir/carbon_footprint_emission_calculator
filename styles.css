@@ -100,7 +100,8 @@ label {
 
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -132,10 +133,9 @@ label {
   justify-items: center;
 }
 
-
 #cal {
   padding: 10px 20px;
-  margin:20px;
+  margin: 20px;
   background: #122a5f;
   border-radius: 10px;
   color: #fca311;
@@ -150,10 +150,10 @@ label {
 }
 
 #result h2 {
-    text-align: center;
+  text-align: center;
   font-size: 2.75rem;
 }
-#result strong {
+.huge  {
   font-size: 2.25rem;
 }
 #result h3 {

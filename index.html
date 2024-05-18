@@ -15,57 +15,58 @@
   </head>
   <body>
     <div class="main">
-      <section>
-        <h1>Carbon Footprint Calculator</h1>
+      <div>
+        <section>
+          <h1>Carbon Footprint Calculator</h1>
+          <p>
+            This calculator intents to help support users inconsidering carbon
+            footprint emissions, payback options and chances of avoiding high
+            CO₂ emissions.
+          </p>
+        </section>
 
-        <p>
-          This calculator intents to help support users inconsidering carbon
-          footprint emissions, payback options and chances of avoiding high CO₂
-          emissions.
-        </p>
-      </section>
-
-      <form id="form" class="flex-col justify-center items-center">
-        <div class="flex-col w-full">
-          <h3 class="question">1. Which eateries do you prefer to eat?</h3>
-          <div>
-            <input type="radio" id="mess" name="location" checked />
-            <label for="mess">Mess's Cadet</label>
+        <form id="form" class="flex-col justify-center items-center">
+          <div class="flex-col w-full">
+            <h3 class="question">1. Which eateries do you prefer to eat?</h3>
+            <div>
+              <input type="radio" id="Mess's Cadet" name="location" checked />
+              <label for="mess">Mess's Cadet</label>
+            </div>
+            <div>
+              <input type="radio" id="Poolside cafe" name="location" />
+              <label for="poolside">Poolside cafe</label>
+            </div>
+            <div>
+              <input type="radio" id="Kasturi cafe" name="location" />
+              <label for="kasturi">Kasturi cafe</label>
+            </div>
           </div>
           <div>
-            <input type="radio" id="poolside" name="location" />
-            <label for="poolside">Poolside cafe</label>
+            <h3 for="weight" class="question">
+              2. What is the average amout of weight that you throw every time
+              you eat?
+            </h3>
+            <div><input type="text" id="weight" required /> kg</div>
           </div>
+
           <div>
-            <input type="radio" id="kasturi" name="location" />
-            <label for="kasturi">Kasturi cafe</label>
+            <h3 for="days" class="question">
+              3. How many times do you eat at eateries in a week?
+            </h3>
+            <select id="days">
+              <option value="1">1 days</option>
+              <option value="2">2 days</option>
+              <option value="3">3 days</option>
+              <option value="4">4 days</option>
+              <option value="5">5 days</option>
+              <option value="6">6 days</option>
+              <option value="7">7 days</option>
+            </select>
           </div>
-        </div>
-        <div>
-          <h3 for="weight" class="question">
-            2. What is the average amout of weight that you throw every time you
-            eat?
-          </h3>
-          <div><input type="text" id="weight" required /> kg</div>
-        </div>
 
-        <div>
-          <h3 for="days" class="question">
-            3. How many times do you eat at eateries in a week?
-          </h3>
-          <select id="days">
-            <option value="1">1 days</option>
-            <option value="2">2 days</option>
-            <option value="3">3 days</option>
-            <option value="4">4 days</option>
-            <option value="5">5 days</option>
-            <option value="6">6 days</option>
-            <option value="7">7 days</option>
-          </select>
-        </div>
-
-        <input type="submit" value="Calculate" id="cal" />
-      </form>
+          <input type="submit" value="Calculate" id="cal" />
+        </form>
+      </div>
 
       <div id="result" style="color: black">
         <section style="background: #fca311">

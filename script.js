@@ -1,7 +1,7 @@
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const location = document.querySelector('input[name="location"]:checked');
+  const location = document.querySelector('input[name="location"]:checked').id;
   const locationValue = location ? location.id : "Unspecified";
 
   const weight = document.getElementById("weight").value;
@@ -17,8 +17,8 @@ document.getElementById("form").addEventListener("submit", function (event) {
       <div id="result" style="color: black">
         <h2>Rest Assured!</h2>
         <img src="./smiley/green.png" />
-        <h3><strong>${totalCarbonFootprint} </strong>kg CO₂e</h3>
-        <p>Carbon footprint emmision at ${location} is low.</p>
+        <h3><strong class='huge'>${totalCarbonFootprint} </strong>kg CO₂e</h3>
+        <p>Carbon footprint emmision at <strong>${location}</strong> is low.</p>
       </div>
     </section>`;
   } else if (totalCarbonFootprint < 141.06) {
@@ -28,7 +28,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         <h2>Stay Alert!</h2>
         <img src="./smiley/yellow.png" />
         <h3><strong>${totalCarbonFootprint} </strong>kg CO₂e</h3>
-        <p>Carbon footprint emmision at ${location} is moderate.</p>
+        <p>Carbon footprint emmision at <strong>${location}</strong> is moderate.</p>
       </div>
     </section>`;
   } else {
@@ -38,7 +38,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         <h2>Warning!</h2>
         <img src="./smiley/red.png" />
         <h3><strong>${totalCarbonFootprint} </strong>kg CO₂e</h3>
-        <p>Carbon footprint emmision at ${location} is high.</p>
+        <p>Carbon footprint emmision at <strong>${location}</strong> is high.</p>
       </div>
     </section>`;
   }
